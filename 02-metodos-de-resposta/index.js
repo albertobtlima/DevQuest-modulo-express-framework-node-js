@@ -18,6 +18,6 @@ app.get("/users/:id", (req, res) => {
   return res.json(user);
 });
 
-app.listen(3000, () => {
-  console.log("Server listening on port 3000");
+server.listen(3000, () => {
+  console.log("Servidor em execução em http://localhost:3000/");
 });
