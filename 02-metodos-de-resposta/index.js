@@ -18,6 +18,25 @@ app.get("/users/:id", (req, res) => {
   return res.json(user);
 });
 
-server.listen(3000, () => {
+app.get("/download", (req, res) => {
+  res.download("gato.jpeg");
+})
+
+app.listen(3000, () => {
   console.log("Servidor em execução em http://localhost:3000/");
 });
+
+
+// res.redirect()  =  envia uma resposta HTTP que redireciona para outra página.
+// res.redirect('/users/ricardo');
+// res.redirect('http://example.com');
+// res.redirect(301, 'http://example.com');
+
+
+// res.status() = define o código de status HTTP da resposta. 
+// O método pode ser encadeado com outros métodos de resposta.
+// return res.status(404).send("User not found");
+
+
+// res.download() = esse método de Express.js é utilizado para enviar um arquivo para o cliente
+// como uma resposta a uma requição HTTP.
